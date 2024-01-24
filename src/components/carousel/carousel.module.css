@@ -1,0 +1,55 @@
+.topContainer{
+    display: flex;
+    justify-content: space-between;
+}
+
+.arrowContainer{
+    display: flex;
+    align-items: center;
+    gap: 15px;
+}
+
+.leftArrow{
+    border: 1px solid black;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+.rightArrow{
+    border: 1px solid black;
+    padding: 7px;
+    font-size: 18px;
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+
+
+
+
+
+
+.image{
+    height: 100px;
+    width: 150px;
+    object-fit: fill;
+}
+
+.topContainer{
+    margin-bottom: 15px;
+}
+.topContainer h3 {
+    font-size: 25px;
+}
+.text{
+    text-align: center;
+    font-size: 18px;
+    color: rgb(31, 30, 30);
+}
+
+.itemContainer{
+    background-color: white;
+    padding-bottom: 10px;
+    cursor: pointer;
+}

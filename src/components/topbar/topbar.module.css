@@ -1,0 +1,46 @@
+.container{
+    background-color: white;
+    height: 9vh;
+    position: fixed;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+    z-index: 300;
+}
+.right{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+.right span {
+    font-size: 20px;
+    &::first-letter{
+        font-weight: 700;
+        text-transform: uppercase;
+    }
+}
+.right > p,.nav {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    font-size: 20px;
+    text-decoration: none;
+    color: black;
+}
+
+.container h3 {
+    font-size: 30px;
+
+}
+.name{
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+}
+
+.menuIconContainer{
+    display: none;
+}

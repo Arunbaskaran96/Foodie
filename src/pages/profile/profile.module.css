@@ -1,0 +1,92 @@
+.container{
+    width: 80%;
+    margin: auto;
+    display: flex;
+}
+.left{
+    width: 250px;
+    background-color: rgba(0, 26, 26, 0.568);
+    height: 91vh;
+}
+.section{
+    color: white;
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    cursor: pointer;
+    margin: 30px 20px;
+    padding: 10px 10px;
+    transition: 500ms;
+    &:hover{
+        background-color: rgb(36, 70, 70);
+    }
+}
+.section span{
+    margin-left: 10px;
+}
+
+.right{
+    background-color: white;
+    width: 100%;
+}
+.profileContainer{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 91vh;
+    flex-direction: column;
+}
+.text{
+    font-size: 24px;
+    margin: 20px;
+    color: teal;
+}
+.text span {
+    color: black;
+    margin-left: 15px;
+}
+
+.editBtn{
+    padding: 10px 30px;
+    cursor: pointer;
+    background-color: transparent;
+    border: 1px solid teal;
+    color: teal;
+}
+.label{
+    font-size: 20px;
+}
+.input{
+    height: 28px;
+    width: 40%;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+
+.addressContainer{
+    display: flex;
+    width: 80%;
+    margin: auto;
+}
+
+.add{
+    border: 1px solid black;
+    padding: 10px 30px;
+    margin-bottom: 15px;
+    margin-top: 20px;
+}
+.add h5{
+    font-size: 20px;
+}
+.add p{
+    margin-top: 5px;
+    font-size: 14px;
+}
+.add button {
+    padding: 8px 25px;
+    cursor: pointer;
+    background-color: orange;
+    border: none;
+    color: wheat;
+    margin-top: 10px;
+}

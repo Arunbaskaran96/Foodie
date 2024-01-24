@@ -1,0 +1,147 @@
+.container{
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0px 30px;
+}
+.left{
+    flex: 7;
+    padding: 0px 50px;
+    margin-top: 50px;
+}
+.right{
+    flex: 5;
+    background-color: white;
+    margin-top: 50px;
+}
+.righttop{
+    padding: 10px 30px;
+}
+.addressTop{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+.change{
+    text-transform: uppercase;
+    font-weight: 800;
+}
+.deliverry{
+    font-size: 20px;
+    font-weight: 800;
+}
+.address{
+    font-size: 20px;
+    font-weight: 800;
+}
+.top{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.addressContainer{
+    padding: 20px 15px;
+    background-color: white;
+}
+.change{
+    color: orangered;
+    cursor: pointer;
+}
+.bottom p{
+    font-size: 14px;
+    margin-top: 12px;
+}
+.bottom h4{
+    margin-top: 10px;
+}
+.paymentContainer{
+    margin-top: 35px;
+    background-color: white;
+    padding: 20px 15px;
+}
+.rightAddress p{
+    margin-bottom: 3px;
+}
+
+.paymentContainer h4{
+    font-size: 20px;
+    font-weight: 800;
+}
+
+.paymentBtn{
+    width: 100%;
+    height: 40px;
+    background-color: #60b246;
+    cursor: pointer;
+    color: white;
+    transition: 500ms;
+    border: none;
+    border-radius: 8px;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    &:hover{
+        transform: scale(0.99);
+    }
+}
+.paymentContainer h4{
+    margin-bottom: 15px;
+}
+
+.righttop{
+    display: flex;
+    gap: 23px;
+}
+
+.rightAddress p {
+    font-size: 15px;
+    margin-top: 5px;
+}
+.image{
+    height: 60px;
+    aspect-ratio: 1/1;
+}
+.foodContainer{
+    height: 56vh;
+    overflow-y: scroll;
+    padding: 10px 20px;
+}
+
+.bottomContainer{
+    padding: 20px 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.foodName{
+    display: inline-block;
+    width: 200px;
+    font-size: 13px;
+}
+
+.foodContainer span{
+    margin-left: 5px;
+}
+
+.list{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 10px;
+}
+.quantityContainer{
+    border: 1px solid grey;
+    display: flex;
+    align-items: center;
+}
+.quantityContainer button {
+    border: none;
+    font-size: 20px;
+    width: 20px;
+    cursor: pointer;
+}
+
+.ruppees{
+    font-size: 14px;
+}

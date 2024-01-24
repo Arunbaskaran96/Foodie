@@ -1,0 +1,36 @@
+.image{
+    height: 160px;
+    width: 210px;
+    object-fit: fill;
+    border-radius: 10px;
+}
+.imageContainer{
+    position: relative;
+}
+
+.imageContainer p{
+    position: absolute;
+    top: 120px;
+    color: white;
+    font-size: 25px;
+    font-weight: 600;
+    left:50px;
+}
+
+.hotelname{
+    font-size: 19px;
+    text-align: center;
+}
+.address{
+    font-size: 16px;
+    text-align: center;
+}
+.container{
+    margin: 10px 0px;
+    padding: 5px 5px;
+    cursor: pointer;
+    transition: 500ms;
+    &:hover{
+        transform: scale(0.98);
+    }
+}

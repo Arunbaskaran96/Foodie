@@ -1,0 +1,73 @@
+.header{
+    height: 8vh;
+    background-color: teal;
+    color: white;
+    display: flex;
+    align-items: center;
+    font-size: 25px;
+    padding-left: 15px;
+}
+.loginContainer{
+    border: 1px solid black;
+    width: 600px;
+    margin: auto;
+    padding: 15px 30px;
+    background-color:rgb(219, 214, 214);
+
+}
+.container{
+    background-image: url(https://kredx-website-assets.s3-ap-southeast-1.amazonaws.com/img/authComponentImages/group-6.png);
+    height: 100vh;
+}
+
+.labelText{
+    display: inline-block;
+    margin-bottom: 10px;
+    font-size: 16px;
+}
+.userInformation{
+    display: flex;
+    margin-bottom: 20px;
+}
+.signupbtn{
+    margin-bottom: 15px;
+    font-size: 25px;
+    color: teal;
+    font-weight: 700;
+    cursor: pointer;
+}
+.signupContainer{
+    text-align: center;
+    width: 50%;
+    border-bottom: 3px solid teal;
+}
+.loginbtn{
+    font-size: 25px;
+    cursor: pointer;
+    text-decoration: none;
+    color: black;
+}
+.loginbtnContainer{
+    width: 50%;
+    text-align: center;
+}
+.authType{
+    margin-top: 10px;
+    color: white;
+    font-size: 30px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+.orContainer{
+    display: flex;
+}
+
+
+@media only screen and (max-width : 600px){
+    .loginContainer{
+        width: 100%;
+    }
+    .header{
+        justify-content: center;
+    }
+}

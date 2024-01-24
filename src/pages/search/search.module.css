@@ -1,0 +1,28 @@
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+.searchContainer{
+    border: 1px solid gray;
+    width: 55%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: auto;
+    margin-top: 50px;
+}
+.input{
+    height: 43px;
+    width: 80%;
+    border: none;
+    background-color: transparent;
+    outline: none;
+    &::placeholder{
+        padding-left: 8px;
+        font-size: 18px;
+    }
+}
+.icon{
+    font-size: 28px;
+}

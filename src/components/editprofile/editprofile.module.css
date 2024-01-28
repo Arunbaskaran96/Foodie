@@ -1,0 +1,48 @@
+.label{
+    font-size: 20px;
+
+}
+.input{
+    height: 28px;
+    width: 40%;
+    margin-left: 15px;
+    margin-bottom: 15px;
+}
+.container{
+    width: 80%;
+    margin: auto;
+    padding-left: 35px;
+    position: relative;
+}
+.form{
+    padding-top: 80px;
+    display: flex;
+
+}
+
+.label{
+    font-size: 20px;
+    margin-bottom: 34px;
+}
+.input{
+    height: 40px;
+    width: 330px;
+}
+
+.btn{
+    width: 70%;
+    margin-left: 15px;
+}
+.SuccessfullyContainer{
+    background-color: rgb(15, 59, 15);
+    text-align: center;
+    padding: 10px;
+    color: white;
+    position: absolute;
+    top: 10px;
+    width: 80%;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    align-items: center;
+}

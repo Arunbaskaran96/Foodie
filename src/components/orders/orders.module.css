@@ -1,0 +1,38 @@
+.img{
+    height: 100px;
+    aspect-ratio: 1/1;
+    object-fit: fill;
+}
+.order{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 10px;
+    padding: 0px 5px;
+}
+
+.container{
+    padding: 0px 20px;
+}
+.header {
+    display: flex;
+    justify-content: space-between;
+    height: 40px;
+    background-color: teal;
+    margin-top: 20px;
+    padding: 0px 5px;
+    color: white;
+    margin-bottom: 15px;
+}
+.header h3{
+    font-size: 18px;
+}
+
+.orders :nth-child(2n-1){
+    background-color: rgb(192, 189, 189);
+}
+
+.orders{
+    height: 80vh;
+    overflow-y: scroll;
+}

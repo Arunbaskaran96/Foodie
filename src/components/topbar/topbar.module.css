@@ -44,3 +44,19 @@
 .menuIconContainer{
     display: none;
 }
+
+.cartCount{
+    font-size: 10px;
+    font-weight: 700;
+    color: white;
+    position: absolute;
+    top: -4px;
+    left: 13px;
+    background-color: red;
+    padding: 0px 3px;
+    border-radius: 50%;
+}
+
+.cartIconContainer{
+    position: relative;
+}

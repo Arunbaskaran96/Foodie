@@ -1,13 +1,16 @@
 import { useState } from "react";
 import classes from "./profile.module.css";
 import { IoPersonCircleSharp, IoBag } from "react-icons/io5";
-import { CiLocationOn } from "react-icons/ci";
 import { FaSignOutAlt } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import Orders from "../../components/orders/Orders";
+import Editprofile from "../../components/editprofile/Editprofile";
+import { useAppSelector } from "../../redux/app/hook";
 
 export default function Profile() {
   const [section, setSection] = useState("profile");
   const navigate = useNavigate();
+  const { user } = useAppSelector((state) => state.userSlice);
 
   const handleChange = (sec: string) => {
     setSection(sec);
@@ -24,12 +27,6 @@ export default function Profile() {
         <div className={classes.section} onClick={() => handleChange("orders")}>
           <IoBag size="30px" /> <span>Orders</span>
         </div>
-        <div
-          className={classes.section}
-          onClick={() => handleChange("address")}
-        >
-          <CiLocationOn size="30px" /> <span>Addresses</span>
-        </div>
         <div className={classes.section} onClick={() => navigate("/")}>
           <FaSignOutAlt size="30px" /> <span>SignOut</span>
         </div>
@@ -39,13 +36,16 @@ export default function Profile() {
           <div className={classes.profileContainer}>
             <div>
               <p className={classes.text}>
-                Name :<span>Arun</span>
+                Name :<span>{user?.name}</span>
               </p>
               <p className={classes.text}>
-                Email :<span>arundhilla@gmail.com</span>
+                Email :<span>{user?.email}</span>
               </p>
               <p className={classes.text}>
-                Mobile :<span>7539913570</span>
+                Mobile :<span>{user?.mobile}</span>
+              </p>
+              <p className={classes.text}>
+                Adress :<span>{user?.address}</span>
               </p>
             </div>
             <button
@@ -56,7 +56,7 @@ export default function Profile() {
             </button>
           </div>
         )}
-        {section === "orders" && <div>Orders</div>}
+        {section === "orders" && <Orders />}
         {section === "address" && (
           <div>
             <div>
@@ -74,24 +74,7 @@ export default function Profile() {
             </div>
           </div>
         )}
-        {section === "editProfile" && (
-          <div style={{ textAlign: "center", paddingTop: "100px" }}>
-            <div>
-              <div>
-                <label className={classes.label}>Name : </label>
-                <input className={classes.input} />
-              </div>
-              <div>
-                <label className={classes.label}>Email : </label>
-                <input className={classes.input} />
-              </div>
-              <div>
-                <label className={classes.label}>Mobile : </label>
-                <input className={classes.input} />
-              </div>
-            </div>
-          </div>
-        )}
+        {section === "editProfile" && <Editprofile />}
       </div>
     </div>
   );

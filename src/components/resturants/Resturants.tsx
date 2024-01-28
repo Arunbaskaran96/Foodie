@@ -1,17 +1,20 @@
+import { Link } from "react-router-dom";
 import classes from "./resturant.module.css";
 
-export default function Resturants() {
+export default function Resturants(props: any) {
+  const { item } = props;
+
   return (
-    <div className={classes.container}>
-      <img
-        className={classes.image}
-        src="https://media-assets.swiggy.com/swiggy/image/upload/fl_lossy,f_auto,q_auto,w_660/w5d2y9e09t0stfgytkmg"
-        alt="resturantImg"
-      />
+    <Link
+      key={item._id}
+      to={`/layout/restaurant/${item._id}?name=${item?.name}`}
+      className={classes.container}
+    >
+      <img className={classes.image} src={item.img} alt="resturantImg" />
       <div>
-        <h5 className={classes.name}>Dubai Resturant</h5>
-        <p className={classes.address}>Chenai</p>
+        <h5 className={classes.name}>{item.name}</h5>
+        <p className={classes.address}>{item.address}</p>
       </div>
-    </div>
+    </Link>
   );
 }

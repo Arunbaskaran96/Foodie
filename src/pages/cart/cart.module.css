@@ -145,3 +145,7 @@
 .ruppees{
     font-size: 14px;
 }
+.cancelIcon{
+    color: red;
+    cursor: pointer;
+}

@@ -6,7 +6,9 @@ import Layout from "./components/layout/Layout";
 import Search from "./pages/search/Search";
 import Cart from "./pages/cart/Cart";
 import Profile from "./pages/profile/Profile";
-import Food from "./pages/food/Food";
+import ProtectedLayout from "./components/protectedLayout/ProtectedLayout";
+import Restaurant from "./pages/restaurant/Restaurant";
+import Category from "./pages/category/Category";
 
 function App() {
   return (
@@ -14,12 +16,15 @@ function App() {
       <Routes>
         <Route path="/" element={<Login />} />
         <Route path="/signup" element={<Register />} />
-        <Route path="/layout" element={<Layout />}>
-          <Route path="home" element={<Home />} />
-          <Route path="search" element={<Search />} />
-          <Route path="cart" element={<Cart />} />
-          <Route path="profile" element={<Profile />} />
-          <Route path="food" element={<Food />} />
+        <Route element={<ProtectedLayout />}>
+          <Route path="/layout" element={<Layout />}>
+            <Route path="home" element={<Home />} />
+            <Route path="search" element={<Search />} />
+            <Route path="cart" element={<Cart />} />
+            <Route path="profile" element={<Profile />} />
+            <Route path="restaurant/:id" element={<Restaurant />} />
+            <Route path="category" element={<Category />} />
+          </Route>
         </Route>
       </Routes>
     </BrowserRouter>

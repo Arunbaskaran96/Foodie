@@ -16,6 +16,8 @@
     margin: 10px 0px;
     transition: 500ms;
     cursor: pointer;
+    text-decoration: none;
+    color: black;
     &:hover{
         transform: scale(0.98);
     }

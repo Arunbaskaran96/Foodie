@@ -3,11 +3,13 @@ import classes from "./input.module.css";
 interface InputProps {
   placeholder: string;
   type: string;
-  onChange?: () => void;
+  onChange?: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  id?: string;
+  required?: boolean;
 }
 
 export default function Input(props: InputProps) {
-  const { placeholder, type, onChange } = props;
+  const { placeholder, type, onChange, id, required } = props;
   return (
     <div>
       <input
@@ -15,6 +17,8 @@ export default function Input(props: InputProps) {
         type={type}
         onChange={onChange}
         className={classes.input}
+        id={id}
+        required={required}
       />
     </div>
   );

@@ -7,13 +7,19 @@
     cursor: pointer;
     transition: 500ms;
     margin-bottom: 15px;
+    min-width: 100px;
     text-transform: uppercase;
+    &:disabled{
+        cursor: not-allowed;
+        opacity: 0.5;
+    }
 }
 
 .signin {
     background-color: rgb(155, 69, 69);
     &:hover{
         background-color: brown;
+
     }
 }
 

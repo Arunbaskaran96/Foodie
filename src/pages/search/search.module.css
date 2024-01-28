@@ -26,3 +26,80 @@
 .icon{
     font-size: 28px;
 }
+
+
+
+.image{
+    height: 80px;
+    aspect-ratio: 1/1;
+    object-fit: fill;
+}
+.itemsContainer{
+    margin-top: 15px
+}
+
+.itemContainer{
+    height: 90px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: white;
+    padding: 0px 15px;
+    margin: 5px 0px;
+}
+.hotel_Name{
+    font-weight: 600;
+    font-size: 18px;
+}
+.hote_address{
+    font-size: 15px;
+}
+.foodName{
+    font-weight: 600;
+    font-size: 18px;
+}
+.foodPrice{
+    margin-top: 3px;
+    display: flex;
+    align-items: center;
+}
+.foodPrice span {
+    font-size: 15px;
+}
+
+.container{
+    position: relative;
+}
+
+.otherRestaurantContainer{
+    background-color: green;
+    width: 40%;
+    margin: auto;
+    padding: 30px 30px;
+    position: absolute;
+    top: 0;
+    left:400px;
+}
+.otherRestaurantContainer h6{
+    color: wheat;
+    font-size: 20px;
+}
+.otherRestaurantContainer p{
+    font-size: 17px;
+    color: white;
+}
+.otherBtnContainer{
+    margin-top: 15px;
+    display: flex;
+    gap: 25px;
+}
+.yesBtn{
+    padding: 10px 30px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+.noBtn {
+    padding: 10px 30px;
+    cursor: pointer;
+}

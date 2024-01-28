@@ -61,6 +61,12 @@
     display: flex;
 }
 
+.error{
+    color: red;
+    text-align: center;
+    font-size: 15px;
+}
+
 @media only screen and (max-width : 600px){
     .loginContainer{
         width: 100%;

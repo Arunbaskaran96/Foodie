@@ -28,7 +28,7 @@ export default function Cart() {
   const cancelHandler = async (item: any) => {
     if (cartItem.length === 1) {
       dispatch(orderCart());
-      await fetch("/api/deletecart", {
+      await fetch("https://foodieapi-7udh.onrender.com/api/deletecart", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -39,13 +39,16 @@ export default function Cart() {
       dispatch(removeCart(item));
       dispatch(subTotal(item.price));
       try {
-        await fetch(`/api/removeCart/${item._id}`, {
-          method: "PUT",
-          headers: {
-            "Content-Type": "application/json",
-            Authorization: token,
-          },
-        });
+        await fetch(
+          `https://foodieapi-7udh.onrender.com/api/removeCart/${item._id}`,
+          {
+            method: "PUT",
+            headers: {
+              "Content-Type": "application/json",
+              Authorization: token,
+            },
+          }
+        );
       } catch (error) {
         console.log(error);
       }
@@ -55,14 +58,14 @@ export default function Cart() {
   const handleSubmit = async () => {
     try {
       dispatch(orderCart());
-      await fetch("/api/deletecart", {
+      await fetch("https://foodieapi-7udh.onrender.com/api/deletecart", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
           Authorization: token,
         },
       });
-      await fetch("/api/addtoorders", {
+      await fetch("https://foodieapi-7udh.onrender.com/api/addtoorders", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -128,11 +131,6 @@ export default function Cart() {
                           {item?.dishName}
                         </span>
                       </div>
-                      {/* <div className={classes.quantityContainer}>
-                    <button>-</button>
-                    <span>0</span>
-                    <button>+</button>
-                  </div> */}
                       <div className={classes.ruppees}>
                         <FaRupeeSign /> <span>{item?.price}</span>
                       </div>

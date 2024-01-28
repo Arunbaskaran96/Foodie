@@ -33,12 +33,15 @@ export default function Restaurant() {
 
   const getItems = async () => {
     try {
-      const data = await fetch(`/api/getRestaurant/${id}`, {
-        method: "GET",
-        headers: {
-          "Content-Type": "apllication/json",
-        },
-      });
+      const data = await fetch(
+        `https://foodieapi-7udh.onrender.com/api/getRestaurant/${id}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "apllication/json",
+          },
+        }
+      );
       const result = await data.json();
       setItems(result);
     } catch (error) {
@@ -53,14 +56,17 @@ export default function Restaurant() {
       price: item.price,
     };
     try {
-      const result = await fetch("/api/addtocart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-        body: JSON.stringify(newdata),
-      });
+      const result = await fetch(
+        "https://foodieapi-7udh.onrender.com/api/addtocart",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+          body: JSON.stringify(newdata),
+        }
+      );
       const data = await result.json();
       if (data.success === false) {
         setOtherRest(true);
@@ -75,7 +81,7 @@ export default function Restaurant() {
 
   const addNewCart = async () => {
     try {
-      await fetch("/api/deletecart/", {
+      await fetch("https://foodieapi-7udh.onrender.com/api/deletecart/", {
         method: "DELETE",
         headers: {
           "Content-Type": "appplication/json",

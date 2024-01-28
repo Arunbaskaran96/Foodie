@@ -8,7 +8,6 @@ import { useAppDispatch, useAppSelector } from "../../redux/app/hook";
 import { oAuthSigninStart } from "../../redux/features/user/userSlice";
 
 export default function Oauth() {
-  const [error, setError] = useState(null);
   const { setItem } = useLocalStorage("token");
   const navigate = useNavigate();
   const dispatch = useAppDispatch();

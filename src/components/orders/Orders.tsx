@@ -5,8 +5,6 @@ import classes from "./orders.module.css";
 export default function Orders() {
   const { user } = useAppSelector((state) => state.userSlice);
 
-  console.log(user);
-
   return (
     <div className={classes.container}>
       <div className={classes.header}>

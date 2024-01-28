@@ -6,7 +6,7 @@ import { fetchedError, fetchedSuccessFully } from "../features/cart/cartSlice"
 const {getItem} =useLocalStorage('token')
 const token=getItem()
 export function* workerAuth(action:any){
-    const data:Record<any,any>= yield call(()=>fetch('http://localhost:8000/api/signin',{
+    const data:Record<any,any>= yield call(()=>fetch('https://foodieapi-7udh.onrender.com/api/signin',{
         method:"POST",
         headers:{
             'Content-Type':'application/json'
@@ -23,7 +23,7 @@ export function* workerAuth(action:any){
 
 
 export function* workerOauth(action:any){
-    const data:Record<any,any>= yield call(()=>fetch('http://localhost:8000/api/oauth',{
+    const data:Record<any,any>= yield call(()=>fetch('https://foodieapi-7udh.onrender.com/api/oauth',{
         method:"POST",
         headers:{
             'Content-Type':'application/json',
@@ -41,7 +41,7 @@ export function* workerOauth(action:any){
 
 
 export function* workerCart (){
-    const data:Record<any,any>=yield fetch("/api/getCart",{
+    const data:Record<any,any>=yield fetch("https://foodieapi-7udh.onrender.com/api/getCart",{
         method:"GET",
         headers:{
             "Content-Type":"application/json",
@@ -57,7 +57,7 @@ export function* workerCart (){
 }
 
 export function* workerEditUser (action:any){
-    const data:Record<any,any>= yield call(()=>fetch('/api/edituser',{
+    const data:Record<any,any>= yield call(()=>fetch('https://foodieapi-7udh.onrender.com/api/edituser',{
         method:"PUT",
         headers:{
             'Content-Type':'application/json',

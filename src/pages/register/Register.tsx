@@ -18,13 +18,16 @@ export default function Register() {
     e.preventDefault();
     setLoading(true);
     try {
-      const data = await fetch("/api/signup", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(formData),
-      });
+      const data = await fetch(
+        "https://foodieapi-7udh.onrender.com/api/signup",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(formData),
+        }
+      );
       const result = await data.json();
       if (result.success === false) {
         setError(result.message);

@@ -11,7 +11,6 @@ import {
   addTotal,
   orderCart,
 } from "../../redux/features/cart/cartSlice";
-import { isAdded } from "../../utils/isAdded";
 
 export default function Search() {
   const [inputValue, setInputValue] = useState<any>(null);
@@ -31,12 +30,15 @@ export default function Search() {
   const getItems = async () => {
     try {
       try {
-        const result = await fetch(`/api/search?dishName=${inputValue}`, {
-          method: "GET",
-          headers: {
-            "Content-type": "application/json",
-          },
-        });
+        const result = await fetch(
+          `https://foodieapi-7udh.onrender.com/api/search?dishName=${inputValue}`,
+          {
+            method: "GET",
+            headers: {
+              "Content-type": "application/json",
+            },
+          }
+        );
         const data = await result.json();
         setDishes(data);
         setLoading(false);
@@ -59,14 +61,17 @@ export default function Search() {
       price: item.price,
     };
     try {
-      const result = await fetch("/api/addtocart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-        body: JSON.stringify(newdata),
-      });
+      const result = await fetch(
+        "https://foodieapi-7udh.onrender.com/api/addtocart",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+          body: JSON.stringify(newdata),
+        }
+      );
       const data = await result.json();
       if (data.success === false) {
         setOtherRest(true);
@@ -81,7 +86,7 @@ export default function Search() {
 
   const addNewCart = async () => {
     try {
-      await fetch("/api/deletecart/", {
+      await fetch("https://foodieapi-7udh.onrender.com/api/deletecart/", {
         method: "DELETE",
         headers: {
           "Content-Type": "appplication/json",

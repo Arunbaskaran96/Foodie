@@ -32,12 +32,15 @@ export default function Category() {
 
   const getDishes = async () => {
     try {
-      const result = await fetch(`/api/search?dishName=${urlType}`, {
-        method: "GET",
-        headers: {
-          "Content-type": "application/json",
-        },
-      });
+      const result = await fetch(
+        `https://foodieapi-7udh.onrender.com/api/search?dishName=${urlType}`,
+        {
+          method: "GET",
+          headers: {
+            "Content-type": "application/json",
+          },
+        }
+      );
       const data = await result.json();
       setDishes(data);
       setLoading(false);
@@ -54,14 +57,17 @@ export default function Category() {
       dishId: item._id,
     };
     try {
-      const result = await fetch("/api/addtocart", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-          Authorization: token,
-        },
-        body: JSON.stringify(newdata),
-      });
+      const result = await fetch(
+        "https://foodieapi-7udh.onrender.com/api/addtocart",
+        {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+            Authorization: token,
+          },
+          body: JSON.stringify(newdata),
+        }
+      );
       const data = await result.json();
       if (data.success === false) {
         setOtherRest(true);
@@ -76,7 +82,7 @@ export default function Category() {
 
   const addNewCart = async () => {
     try {
-      await fetch("/api/deletecart/", {
+      await fetch("https://foodieapi-7udh.onrender.com/api/deletecart/", {
         method: "DELETE",
         headers: {
           "Content-Type": "appplication/json",

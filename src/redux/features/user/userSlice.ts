@@ -48,7 +48,7 @@ const userSlice=createSlice({
             state.user=null,
             state.loading=false
         },
-        oAuthSigninStart:(state:INITIAL_STATE)=>{
+        oAuthSigninStart:(state:INITIAL_STATE,action:PayloadAction<Record<any,any>>)=>{
             state.loading=true
         },
         oAuthSigninSuccess:(state:INITIAL_STATE,action:PayloadAction<User>)=>{

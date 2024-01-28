@@ -13,12 +13,15 @@ export default function Home() {
 
   const getRestaurants = async () => {
     try {
-      const data = await fetch("/api/getRestaurants", {
-        method: "GET",
-        headers: {
-          "Content-Type": "application/json",
-        },
-      });
+      const data = await fetch(
+        "https://foodieapi-7udh.onrender.com/api/getRestaurants",
+        {
+          method: "GET",
+          headers: {
+            "Content-Type": "application/json",
+          },
+        }
+      );
       const res = await data.json();
       setRestaurants(res);
     } catch (error) {

@@ -1,4 +1,4 @@
-import React, { FormEvent, useEffect, useState } from "react";
+import React, { FormEvent, useState } from "react";
 import { useAppDispatch, useAppSelector } from "../../redux/app/hook";
 import Button from "../UI/button/Button";
 import classes from "./editprofile.module.css";

@@ -23,12 +23,14 @@ export function* workerAuth(action:any){
 
 
 export function* workerOauth(action:any){
+
     const data:Record<any,any>= yield call(()=>fetch('https://foodieapi-7udh.onrender.com/api/oauth',{
         method:"POST",
         headers:{
             'Content-Type':'application/json',
 
         },
+
         body:JSON.stringify(action.payload)
     }))
     const result:User=yield data.json()

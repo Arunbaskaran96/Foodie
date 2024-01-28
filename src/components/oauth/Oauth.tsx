@@ -26,8 +26,14 @@ export default function Oauth() {
       const provider = new GoogleAuthProvider();
       const auth = getAuth(app);
       const result = await signInWithPopup(auth, provider);
+
       if (result) {
-        dispatch(oAuthSigninStart({ email: result.user.email }));
+        dispatch(
+          oAuthSigninStart({
+            email: result.user.email,
+            name: result.user.displayName,
+          })
+        );
       } else {
         console.log("error");
       }

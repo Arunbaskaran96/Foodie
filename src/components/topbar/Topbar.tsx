@@ -11,6 +11,7 @@ import classNames from "classnames";
 
 export default function Topbar() {
   const { cartItem } = useAppSelector((state) => state.cartSlice);
+  const { user } = useAppSelector((state) => state.userSlice);
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(fetchingCart());
@@ -27,7 +28,7 @@ export default function Topbar() {
           <CiSearch /> <span>Search</span>
         </Link>
         <Link className={classes.nav} to="/layout/profile">
-          <IoPersonOutline /> <span>Arun</span>
+          <IoPersonOutline /> <span>{user.name}</span>
         </Link>
         <Link
           className={classNames(classes.nav, classes.cartIconContainer)}
